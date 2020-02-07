@@ -20,7 +20,11 @@
     }
   },
   "dependencies": {
-    "nuxt": "2.0.0"
+    "axios": "0.19.2",
+    "bootstrap": "4.4.1",
+    "flatpickr": "4.6.3",
+    "nuxt": "2.0.0",
+    "vee-validate": "3.2.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "1.0.1",
