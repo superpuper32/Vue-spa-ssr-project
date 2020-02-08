@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['bootstrap/dist/css/bootstrap.css'],
   /*
    ** Plugins to load before mounting the App
    */
