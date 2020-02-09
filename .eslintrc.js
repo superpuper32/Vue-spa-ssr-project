@@ -15,9 +15,11 @@ module.exports = {
     'plugin:nuxt/recommended'
   ],
   plugins: [
-    'prettier'
+    'prettier',
+    'html'
   ],
   // add your custom rules here
   rules: {
+    "vue/attributes-order": "off"
   }
 }
