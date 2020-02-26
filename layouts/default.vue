@@ -1,9 +1,10 @@
+/* eslint-disable prettier/prettier */
 <template>
   <div class="bg-light">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <Nuxt-link class="navbar-brand" to="/">
-        {{ $store.state.navbarTitle }} {{ $store.getters.titleCount }}
-      </Nuxt-link>
+      <!-- <nuxt-link class="navbar-brand" to="/"
+        >{{ $store.state.navbarTitle }} {{ $store.getters.titleCount }}</nuxt-link
+      >-->
 
       <button
         class="navbar-toggler"
@@ -20,27 +21,19 @@
       <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <Nuxt-link tag="li" class="nav-item" to="/">
-            <a href="#" class="nav-link">
-              Home
-            </a>
+            <a href="#" class="nav-link">Home</a>
           </Nuxt-link>
 
           <Nuxt-link tag="li" class="nav-item" to="/users">
-            <a href="#" class="nav-link">
-              Users
-            </a>
+            <a href="#" class="nav-link">Users</a>
           </Nuxt-link>
 
           <Nuxt-link tag="li" class="nav-item" to="/phones">
-            <a href="#" class="nav-link">
-              Users Phones
-            </a>
+            <a href="#" class="nav-link">Users Phones</a>
           </Nuxt-link>
 
           <Nuxt-link tag="li" class="nav-item" to="/create">
-            <a href="#" class="nav-link">
-              Create
-            </a>
+            <a href="#" class="nav-link">Create</a>
           </Nuxt-link>
         </ul>
       </div>
