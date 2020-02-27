@@ -27,7 +27,8 @@
     "eslint-plugin-html": "6.0.0",
     "flatpickr": "4.6.3",
     "nuxt": "2.11.0",
-    "vee-validate": "3.2.4"
+    "vee-validate": "3.2.4",
+    "vue2-editor": "^2.10.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "1.0.1",
