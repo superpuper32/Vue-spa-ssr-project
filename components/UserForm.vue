@@ -18,9 +18,7 @@
                 class="form-control"
                 :class="{ 'is-invalid': invalid }"
               />
-              <span v-if="errors.length" class="help-block text-danger">
-                {{ errors[0] }}
-              </span>
+              <span v-if="errors.length" class="help-block text-danger">{{ errors[0] }}</span>
             </ValidationProvider>
 
             <ValidationProvider
@@ -37,9 +35,7 @@
                 class="form-control"
                 :class="{ 'is-invalid': invalid }"
               />
-              <span v-if="errors.length" class="help-block text-danger">
-                {{ errors[0] }}
-              </span>
+              <span v-if="errors.length" class="help-block text-danger">{{ errors[0] }}</span>
             </ValidationProvider>
           </div>
 
@@ -58,9 +54,7 @@
                 class="form-control"
                 :class="{ 'is-invalid': invalid }"
               />
-              <span v-if="errors.length" class="help-block text-danger">
-                {{ errors[0] }}
-              </span>
+              <span v-if="errors.length" class="help-block text-danger">{{ errors[0] }}</span>
             </ValidationProvider>
 
             <div class="col-md-6">
@@ -71,7 +65,9 @@
 
           <div class="form-group">
             <label>Аватар</label>
-            <AvatarUpload v-model="localUser.picture" />
+            <client-only>
+              <AvatarUpload v-model="localUser.picture" />
+            </client-only>
           </div>
 
           <div class="row mb-3">
@@ -82,7 +78,9 @@
 
             <div class="col-md-6">
               <label>Зарегистрирован</label>
-              <Datepicker v-model="localUser.registered" />
+              <client-only>
+                <Datepicker v-model="localUser.registered" />
+              </client-only>
             </div>
           </div>
 
@@ -121,7 +119,9 @@
 
           <div class="mb-3">
             <label>Биография</label>
-            <RichEditor v-model="localUser.about" />
+            <client-only>
+              <RichEditor v-model="localUser.about" />
+            </client-only>
           </div>
 
           <slot name="buttons" />
