@@ -50,6 +50,16 @@ export default {
   watch: {
     $route: 'loadUser'
   },
+  asyncData(route) {
+    return axios
+      .get('http://localhost:3004/users/' + route.query.id)
+      .then(response => {
+        return {
+          user: response.data
+        }
+      })
+      .catch(error => console.error(error))
+  },
   mounted() {
     this.loadUser()
   },
