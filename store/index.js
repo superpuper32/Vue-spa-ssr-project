@@ -4,28 +4,28 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-const store = () =>
-  new Vuex.Store({
-    strict: process.env.NODE_ENV !== 'production',
-    state: {
-      navbarTitle: 'Vuex SINPAGAPP',
-      users: []
-    },
-    getters: {
-      titleCount: state => state.navbarTitle.length
-    },
-    mutations: {
-      changeTitle: (state, payload) => (state.navbarTitle = payload),
-      setUsers: (state, payload) => (state.users = payload)
-    },
-    actions: {
-      loadUsers({ commit }) {
-        axios
-          .get('http://localhost:3004/users')
-          .then(response => commit('setUsers', response.data))
-          .catch(error => console.error(error))
-      }
-    }
-  })
+export const strict = process.env.NODE_ENV !== 'production'
 
-export default store
+export const state = () => ({
+  navbarTitle: 'Vuex SINPAGAPP',
+  users: []
+})
+
+export const getters = {
+  changeTitle: (state, payload) => (state.navbarTitle = payload),
+  setUsers: (state, payload) => (state.users = payload)
+}
+
+export const mutations = {
+  changeTitle: (state, payload) => (state.navbarTitle = payload),
+  setUsers: (state, payload) => (state.users = payload)
+}
+
+export const actions = {
+  loadUsers({ commit }) {
+    axios
+      .get('http://localhost:3004/users')
+      .then(response => commit('setUsers', response.data))
+      .catch(error => console.error(error))
+  }
+}
