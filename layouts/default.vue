@@ -1,10 +1,7 @@
-/* eslint-disable prettier/prettier */
 <template>
   <div class="bg-light">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <!-- <nuxt-link class="navbar-brand" to="/"
-        >{{ $store.state.navbarTitle }} {{ $store.getters.titleCount }}</nuxt-link
-      >-->
+      <nuxt-link class="navbar-brand" to="/">{{ $store.state.navbarTitle }}</nuxt-link>
 
       <button
         class="navbar-toggler"
@@ -29,7 +26,7 @@
           </Nuxt-link>
 
           <Nuxt-link tag="li" class="nav-item" to="/phones">
-            <a href="#" class="nav-link">Users Phones</a>
+            <a href="#" class="nav-link">Phones</a>
           </Nuxt-link>
 
           <Nuxt-link tag="li" class="nav-item" to="/create">
