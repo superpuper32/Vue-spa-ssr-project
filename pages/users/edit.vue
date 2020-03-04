@@ -12,9 +12,13 @@
       <div class="card-body bg-light">
         <UserForm v-model="user">
           <template v-slot:buttons>
-            <button type="button" class="btn btn-primary" @click="save">Сохранить</button>
+            <button type="button" class="btn btn-primary" @click="save">
+              Сохранить
+            </button>
 
-            <button type="button" class="btn btn-danger ml-2" @click="remove">Удалить</button>
+            <button type="button" class="btn btn-danger ml-2" @click="remove">
+              Удалить
+            </button>
           </template>
         </UserForm>
       </div>

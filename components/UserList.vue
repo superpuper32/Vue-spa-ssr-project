@@ -5,7 +5,11 @@
         <p class="navbar-brand">Количество пользователей - {{ totalRows }}</p>
 
         <form class="form-inline">
-          <button class="btn btn-primary my-2 my-sm-0" type="button" @click="loadUsers">
+          <button
+            class="btn btn-primary my-2 my-sm-0"
+            type="button"
+            @click="loadUsers"
+          >
             <i :class="['fa fa-fw fa-refresh', loading ? 'fa-spin' : '']" />
             Обновить
           </button>
@@ -17,7 +21,9 @@
       <div class="row">
         <div class="col-md-4 mb-3">
           <RowsSelector v-model.number="rowsPerPage" />
-          <label for="country">Выбрано элементов на страницу - {{ rowsPerPage }}</label>
+          <label for="country"
+            >Выбрано элементов на страницу - {{ rowsPerPage }}</label
+          >
         </div>
       </div>
 
@@ -38,7 +44,11 @@
 
     <div class="card-footer">
       <div class="form-group">
-        <PagesPagination v-model.number="selectedPage" :per-page="rowsPerPage" :total="totalRows" />
+        <PagesPagination
+          v-model.number="selectedPage"
+          :per-page="rowsPerPage"
+          :total="totalRows"
+        />
         <p>Выбрана страница - {{ selectedPage }}</p>
       </div>
     </div>

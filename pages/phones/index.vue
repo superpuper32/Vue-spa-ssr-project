@@ -11,7 +11,9 @@
       </template>
       <template v-slot:table-row="props">
         <td>
-          <RouterLink :to="`/users/edit?id=${props.id}`">{{ props.id }}</RouterLink>
+          <RouterLink :to="`/users/edit?id=${props.id}`">{{
+            props.id
+          }}</RouterLink>
         </td>
         <td>{{ props.firstName }}</td>
         <td>{{ props.lastName }}</td>

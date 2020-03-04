@@ -1,7 +1,9 @@
 <template>
   <div class="bg-light">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <nuxt-link class="navbar-brand" to="/">{{ $store.state.navbarTitle }}</nuxt-link>
+      <nuxt-link class="navbar-brand" to="/">{{
+        $store.state.navbarTitle
+      }}</nuxt-link>
 
       <button
         class="navbar-toggler"
@@ -47,7 +49,9 @@ export default {
   name: 'App',
   computed: {
     title() {
-      return this.$store.state.navbarTitle + ' ' + this.$store.getters.titleCount
+      return (
+        this.$store.state.navbarTitle + ' ' + this.$store.getters.titleCount
+      )
     }
   }
 }

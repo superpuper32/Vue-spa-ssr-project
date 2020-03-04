@@ -1,5 +1,9 @@
 <template>
-  <select class="custom-select d-block" :value="value" @input="selected($event.target.value)">
+  <select
+    class="custom-select d-block"
+    :value="value"
+    @input="selected($event.target.value)"
+  >
     <option v-for="item in list" :key="item" :value="item">
       {{ item }}
     </option>

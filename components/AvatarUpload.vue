@@ -6,7 +6,9 @@
 
     <div class="row">
       <div class="col-md-2">
-        <button type="button" class="btn btn-primary" @click="selectFile">Выбрать...</button>
+        <button type="button" class="btn btn-primary" @click="selectFile">
+          Выбрать...
+        </button>
         <input ref="file" type="file" class="hidden" @change="upload" />
       </div>
 

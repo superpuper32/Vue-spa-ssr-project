@@ -18,7 +18,9 @@
                 class="form-control"
                 :class="{ 'is-invalid': invalid }"
               />
-              <span v-if="errors.length" class="help-block text-danger">{{ errors[0] }}</span>
+              <span v-if="errors.length" class="help-block text-danger">{{
+                errors[0]
+              }}</span>
             </ValidationProvider>
 
             <ValidationProvider
@@ -35,7 +37,9 @@
                 class="form-control"
                 :class="{ 'is-invalid': invalid }"
               />
-              <span v-if="errors.length" class="help-block text-danger">{{ errors[0] }}</span>
+              <span v-if="errors.length" class="help-block text-danger">{{
+                errors[0]
+              }}</span>
             </ValidationProvider>
           </div>
 
@@ -54,12 +58,18 @@
                 class="form-control"
                 :class="{ 'is-invalid': invalid }"
               />
-              <span v-if="errors.length" class="help-block text-danger">{{ errors[0] }}</span>
+              <span v-if="errors.length" class="help-block text-danger">{{
+                errors[0]
+              }}</span>
             </ValidationProvider>
 
             <div class="col-md-6">
               <label>Телефон</label>
-              <input v-model="localUser.phone" type="text" class="form-control" />
+              <input
+                v-model="localUser.phone"
+                type="text"
+                class="form-control"
+              />
             </div>
           </div>
 
@@ -73,7 +83,11 @@
           <div class="row mb-3">
             <div class="col-md-6">
               <label>Возраст</label>
-              <input v-model="localUser.age" type="number" class="form-control" />
+              <input
+                v-model="localUser.age"
+                type="number"
+                class="form-control"
+              />
             </div>
 
             <div class="col-md-6">
@@ -88,7 +102,9 @@
             <div class="col-md-6">
               <label>Уровень доступа</label>
               <select v-model="localUser.accessLevel" class="form-control">
-                <option v-for="item in accessList" :key="item">{{ item }}</option>
+                <option v-for="item in accessList" :key="item">{{
+                  item
+                }}</option>
               </select>
             </div>
 
@@ -103,18 +119,30 @@
           <div class="row mb-3">
             <div class="col-md-6">
               <label>Компания</label>
-              <input v-model="localUser.company" type="text" class="form-control" />
+              <input
+                v-model="localUser.company"
+                type="text"
+                class="form-control"
+              />
             </div>
 
             <div class="col-md-6">
               <label>Баланс</label>
-              <input v-model="localUser.balance" type="text" class="form-control" />
+              <input
+                v-model="localUser.balance"
+                type="text"
+                class="form-control"
+              />
             </div>
           </div>
 
           <div class="form-group">
             <label>Адрес</label>
-            <input v-model="localUser.address" type="text" class="form-control" />
+            <input
+              v-model="localUser.address"
+              type="text"
+              class="form-control"
+            />
           </div>
 
           <div class="mb-3">
